@@ -253,7 +253,8 @@
 		$(document).on('input', '#photo', function(){
 			var file = $('#photo')[0].files[0];
 			// verify size of 5MB max '45843'
-			if(file['size'] < 50000){
+			console.log(file['size']);
+			if(file['size'] < 3145728){
 				getBase64(file, 'myPhoto');
 			}else{
 				alert('Tamanho maximo do arquivo deve ser de 5MB');

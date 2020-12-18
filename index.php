@@ -1,81 +1,19 @@
-<html>
-<head>
-	<title>Peixaria Claudia Pescados</title>
+<?php
 
-	<!-- Font Awesome -->
-	<link href="resourses/fontawesome/css/all.css" rel="stylesheet">
-	<link rel="shortcut icon" href="#">
+require_once("vendor/autoload.php");
 
-	<!-- Jquery -->
-	<script src="resourses/jquery/jquery-3.5.1.js"></script>
-</head>
-<body>
+$app = new \Slim\Slim();
 
-	<?php require_once('views/header.php'); ?>
+$app->get('/', function(){
+	require_once('user.php');
+});
 
+$app->get('/admin', function(){
+	require_once('admin.php');
+});
 
-	<?php require_once('views/promotions.php'); ?>
+$app->run();
 
 
-	<?php require_once('views/footer.php'); ?>
+?>
 
-	<style type="text/css">
-	body{
-		overflow-x: hidden;
-	}
-
-	.disabled{
-		display: none;
-	}
-
-	</style>
-
-	<script type="text/javascript">
-		$( document ).ready(function() {
-
-	    	//loadPromotions();
-		});
-
-		var promotionsContent = [];
-		function setPromotionsContent(arrayValue){
-			promotionsContent = arrayValue;
-		};
-
-		function loadPromotions(){
-			 $.ajax({
-		        type: "POST",
-		        url: "Class/promocao.php",
-		        data: {action: 'getPromotions'}, 
-		        success: function(result){
-		        	var content = result;
-		        	//var content = JSON.parse(result);
-		        	if(content['success'] == true){
-		        		setPromotionsContent(content['content']);
-		        		showPromotions();
-		        	}else{
-		        		$('#preview-img').attr('src', '');
-		        		$('#preview-img').html('Nenhuma promoção');
-		        	}
-		        }
-    		});
-		}
-
-		function showPromotions(){
-				setInterval(function(){
-					if(b == 2){
-						b = 0;
-					}					
-					// here it'll change the photo
-					
-					$('#preview-img').attr('src', './img/'+a[b]);
-					b++;
-					console.log('he')
-			    } , 6000);
-		}
-		
-
-	</script>
-
-	
-</body>
-</html>
