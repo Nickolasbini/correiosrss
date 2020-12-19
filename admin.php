@@ -154,7 +154,7 @@
 		function callPage(url, action){
 			$.ajax({
 		        type: "POST",
-		        url: "Class/adminController.php",
+		        url: "class/adminController.php",
 		        data: {url: url, action: 'action-' + action + 'GetList'}, 
 		        success: function(result){
 		        	console.log(result);
@@ -171,7 +171,7 @@
 		function GetIconsAndOptions(){
 			$.ajax({
 		        type: "POST",
-		        url: "Class/adminController.php",
+		        url: "class/adminController.php",
 		        data: {action: 'action-GetIcons&Options'}, 
 		        success: function(result){
 			        $('.scene-admin').html(result)
@@ -184,7 +184,7 @@
 			var categoryName = $('#nomeCategoria').val();
 			$.ajax({
 		        type: "POST",
-		        url: "Class/categoryController.php",
+		        url: "class/categoryController.php",
 		        data: {action: 'action-save', categoryName: categoryName}, 
 		        dataType: 'JSON',
 		        success: function(result){
@@ -202,7 +202,7 @@
 
 			$.ajax({
 		        type: "POST",
-		        url: "Class/categoryController.php",
+		        url: "class/categoryController.php",
 		        data: {action: 'action-saveNew', categoryId: categoryId, categoryName: categoryName}, 
 		        dataType: 'JSON',
 		        success: function(result){
@@ -220,7 +220,7 @@
 			}else{
 				$.ajax({
 			        type: "POST",
-			        url: "Class/categoryController.php",
+			        url: "class/categoryController.php",
 			        data: {action: 'action-removeCategory', parameters: parameters}, 
 			        dataType: 'JSON',
 			        success: function(result){
@@ -283,7 +283,7 @@
 			}else{
 				$.ajax({
 			        type: "POST",
-			        url: "Class/produtoController.php",
+			        url: "class/produtoController.php",
 			        data: {action: 'action-save', parameters}, 
 			        dataType: 'JSON',
 			        success: function(result){
@@ -304,7 +304,7 @@
 
 			$.ajax({
 		        type: "POST",
-		        url: "Class/produtoController.php",
+		        url: "class/produtoController.php",
 		        data: {action: 'action-saveNew', categoryId: categoryId, categoryName: categoryName}, 
 		        dataType: 'JSON',
 		        success: function(result){
@@ -319,7 +319,7 @@
 			var parameters = $('#removeList').find(':selected').val();
 			$.ajax({
 		        type: "POST",
-		        url: "Class/productController.php",
+		        url: "class/productController.php",
 		        data: {action: 'action-removeCategory', productId: parameters}, 
 		        dataType: 'JSON',
 		        success: function(result){
