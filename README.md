@@ -38,7 +38,7 @@ Para gerar um servidor local
 
 ## Utilização
 
-Está rota é responsável pela realização relatórios. Por padrão utiliza a data corrente para filtrar notícias
+Está rota é responsável pela realização relatórios.
 
 ```
   POST api/news
@@ -72,15 +72,8 @@ Está rota é responsável pela realização relatórios. Por padrão utiliza a 
             "'É bíblico' diz homem enquanto estuprava a filha",
             "Mega-Sena acumula e próximo concurso deve pagar R$ 45 milhões"
         ]
-    },
-    "date": "2022-04-07"
+    }
 }
-```
-
-Para realizar relatórios filtrados por uma data específica ou, a data corrente por padrão
-
-```
-  POST api/news/{date}
 ```
 
 Para realizar relatórios filtrados por uma categoria específica
