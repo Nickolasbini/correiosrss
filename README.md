@@ -41,7 +41,7 @@ Para gerar um servidor local
 Está rota é responsável pela realização relatórios.
 
 ```
-  POST api/news
+  GET api/news
 ```
 
 ```json
@@ -79,7 +79,7 @@ Está rota é responsável pela realização relatórios.
 Para realizar relatórios filtrados por uma categoria específica
 
 ```
-  POST api/news/category/{categoryName}
+  GET api/news/category/{categoryName}
 ```
 
 ```json
@@ -93,6 +93,38 @@ Para realizar relatórios filtrados por uma categoria específica
         ]
     },
     "category": "brasil"
+}
+```
+
+Para realizar relatório contendo todas as categorias
+
+```
+  GET api/newscategory
+```
+
+```json
+  {
+    "success": true,
+    "error": null,
+    "content": {
+        "quantidade": 14,
+        "noticias": [
+            "entretenimento",
+            "educação",
+            "brasil",
+            "nelson cadena",
+            "marrom",
+            "de volta",
+            "estúdio correio",
+            "bahia",
+            "salvador",
+            "paula theotonio",
+            "oscar quiroga",
+            "artigo",
+            "satélite",
+            "em alta"
+        ]
+    }
 }
 ```
 
