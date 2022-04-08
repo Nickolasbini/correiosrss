@@ -16,21 +16,6 @@ Para buscar dependencias do projeto
   composer update
 ```
 
-Para criar o arquivo de configuração (.env)
-```
-  cp .env.example .env
-```
-
-Para configurar o arquivo de configuração (.env)
-```
-  php artisan key:generate
-```
-
-Para atualizar o cache da aplicação
-```
-  php artisan optimize
-```
-
 Para gerar um servidor local
 ```
   php artisan serve
