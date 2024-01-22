@@ -5,6 +5,13 @@ contendo uma lista de notícias.
 
 Utilizando de um formato de aplicação rest API, está gera relatórios a partir dos dados consumidos pelo serviço acima e os filtra em diferentes formatos.
 
+--
+
+Application responsible for consuming an XML file from https://www.correio24horas.com.br/rss/ and generating a report in JSON format
+containing a list of news.
+
+Using a rest API application format, it generates reports from the data consumed by the above service and filters them into different formats.
+
 ## Requisitos
 
 * PHP >= 7.3
